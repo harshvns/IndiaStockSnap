@@ -1,44 +1,72 @@
-**India Stock Snap**
+# India Stock Snap
 
-Multi-factor model to predict Indian stock market opening prices using global cues, macro assets, technicals, and news sentiment.
+A **multi-factor model** to predict Indian stock market opening prices using **global cues, macro assets, technical indicators, and news sentiment**.  
 
-**Overview**
+---
 
-Forecast next-session open for Indian indices/stocks by combining:
+## 📌 Overview  
 
-Macro: gold, crude oil, USD/INR, DXY
-Global lead–lag: prior closes/overnights of US/EU/Asia markets
-Technicals: MA50/MA200, Bollinger Bands, volatility
-Sentiment: news on tariffs, geopolitics, demand/supply
+This project forecasts the **next-session open** for Indian indices/stocks by combining multiple signals:  
 
-**Key Signals**
+- **Macro Factors:** Gold, crude oil, USD/INR, DXY  
+- **Global Lead–Lag:** Prior closes/overnights of US, EU, and Asia markets  
+- **Technicals:** MA50/MA200, Bollinger Bands, volatility  
+- **Sentiment:** News related to tariffs, geopolitics, demand/supply  
 
-MA50 and MA200 percent distances: (Close − MA) / MA
-Blended MA signal: w50pct_50 + w200pct_200 (small, tunable weights)
-Gap-open and return-based features, calendar/holiday flags
+---
 
-**Tech Stack**
+## 📊 Key Signals  
 
-Python, Google Colab
-pandas, numpy, scikit-learn, ta/TA-Lib, matplotlib/seaborn
-yfinance/Alpha Vantage, NewsAPI/GDELT (optional)
-Data Sources
-Prices/FX/commodities: Yahoo Finance (yfinance), Alpha Vantage
-News: NewsAPI, GDELT
-Note: Follow each provider’s Terms of Service
+- **MA50 and MA200 percent distances:**  
 
-**Usage**
+- **Blended MA signal:**  
+(with small, tunable weights)
 
-Open the notebook (IndiaStockSnap.ipynb) in Colab
-Set tickers, date range, and any API keys
-Run all cells to fetch data, engineer features, train models, and predict next open
-Tune MA weights (w50, w200) and evaluate (MAE, RMSE, directional hit rate)
+- **Other Features:**  
+- Gap-open and return-based features  
+- Calendar/holiday flags  
 
-**Future Scope**
+---
 
-Finance-tuned sentiment, multilingual news
-More India-specific macro (CPI/WPI, PMI, RBI events)
-Web/API for daily live predictions
+## 🛠 Tech Stack  
 
-Disclaimer: Research/education only, not investment advice.
-Developed as a college project
+- **Languages & Environment:** Python, Google Colab  
+- **Libraries:** pandas, numpy, scikit-learn, TA-Lib/ta, matplotlib, seaborn  
+- **APIs & Data Sources:**  
+- Prices/FX/commodities: Yahoo Finance (yfinance), Alpha Vantage  
+- News: NewsAPI, GDELT  
+
+> ⚠️ Follow each provider’s **Terms of Service**  
+
+---
+
+## 🚀 Usage  
+
+1. Open the notebook **`IndiaStockSnap.ipynb`** in Colab.  
+2. Set tickers, date range, and API keys (if required).  
+3. Run all cells to:  
+ - Fetch market/macro/news data  
+ - Engineer features  
+ - Train models  
+ - Predict the next open  
+4. Tune MA weights (**w50, w200**) and evaluate using:  
+ - MAE  
+ - RMSE  
+ - Directional hit rate  
+
+---
+
+## 🔮 Future Scope  
+
+- Advanced sentiment models tuned for **finance and multilingual news**  
+- Inclusion of more **India-specific macro factors** (CPI/WPI, PMI, RBI events)  
+- Deployment via **Web/API** for daily live predictions  
+
+---
+
+## ⚠️ Disclaimer  
+
+This project is for **research and educational purposes only**.  
+It is **not investment advice**.  
+
+**Developed as a college project.**  
